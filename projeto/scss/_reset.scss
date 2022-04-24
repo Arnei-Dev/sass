@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 * {
     border: 0;
     margin: 0;
@@ -29,6 +31,9 @@ section {
 .container {
     margin: 0 auto;
     max-width: 1200px;
+    @media (max-width: 1199px) {
+         max-width: math.div(1000, 1200) * 100%;
+    }
 }
 
 img {
@@ -68,5 +73,14 @@ h3 {
 
 header,
 footer {
-    background-color: $bg-color
+    background-color: $bg-color;
+}
+
+footer {
+    $foot: $hw;
+    margin-top: $mt-f;
+    @media (max-width: $tablet ) {
+         height: $foot;
+         clear: both;
+    }
 }

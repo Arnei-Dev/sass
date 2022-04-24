@@ -30,6 +30,11 @@ section {
   margin: 0 auto;
   max-width: 1200px;
 }
+@media (max-width: 1199px) {
+  .container {
+    max-width: 83.3333333333%;
+  }
+}
 
 img {
   width: 100%;
@@ -71,75 +76,115 @@ footer {
   background-color: #ddd;
 }
 
-.blocks h2 {
-  color: #00008B;
+footer {
+  margin-top: 8rem;
 }
-.blocks ul {
+@media (max-width: 999px) {
+  footer {
+    height: 4.5rem;
+    clear: both;
+  }
+}
+
+.blocks__title {
+  color: #00008B;
+  margin-top: 4.5rem;
+}
+.blocks__list {
   list-style-type: none;
   font-size: 1.2rem;
   display: block;
-  height: 250px;
+  height: 270px;
   padding: 1rem 0;
   width: 100%;
   margin-bottom: 2.5rem;
 }
-.blocks li {
+.blocks__item {
   color: #999;
   display: block;
   float: left;
-  margin: 1rem 1.5rem;
-  width: 30%;
+  margin: auto 0.5rem;
+  width: calc(33% - 15px);
 }
-.blocks li .img-container {
+@media (max-width: 999px) {
+  .blocks__item {
+    width: calc(99% - 30px);
+  }
+}
+.blocks__img-container {
   display: block;
-  height: 200px;
+  height: 19.5rem;
   overflow: hidden;
   width: 100%;
 }
-.blocks li a {
+@media (max-width: 999px) {
+  .blocks__img-container {
+    height: auto;
+  }
+}
+.blocks__text-description {
+  color: #222;
+  padding: 0.5rem;
+}
+.blocks__button {
   background-color: #00008B;
   border-radius: 5px;
   color: white;
   display: block;
   font-size: 2.2rem;
-  margin: 3rem auto 2.5rem;
+  margin: 3rem 4rem 2.5rem;
   padding: 4px 8px;
   text-align: center;
   text-decoration: none;
 }
 
-.cars h2 {
+.cars__title {
   color: #999;
+  margin-top: 8rem;
 }
-.cars li {
+.cars__item {
+  border: 1px solid #00008B;
   color: #222;
+  display: block;
 }
-.cars li a {
+@media (max-width: 999px) {
+  .cars__item {
+    margin-top: 4.5rem;
+  }
+}
+.cars__item--destaks {
+  border: 1px solid #00008B;
   background-color: #444;
+}
+.cars__text-description {
+  color: #FFFF00;
+}
+.cars__button {
+  background-color: #f00;
 }
 
 .destack {
   background-color: #222;
-  padding: 1.5rem;
+  padding: 0.5rem;
 }
-.destack h1 {
+.destack__title {
   color: #f00;
   float: left;
   font-size: 3rem;
   margin-top: 0;
 }
-.destack h2 {
+.destack__subtitle {
   float: left;
   font-size: 1.2rem;
-  margin-left: 1.5rem;
-  margin-top: 1.5rem;
+  margin-left: 0.5rem;
+  margin-top: 4.5rem;
 }
-.destack img {
+.destack__img {
   width: 100%;
   height: auto;
-  margin: 1.5rem auto;
+  margin: 0.5rem auto;
 }
-.destack p {
+.destack__description {
   font-size: 1.5rem;
   color: #f00;
   padding: 2rem 0;

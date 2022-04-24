@@ -1,12 +1,34 @@
-.cars {
-    h2 {
-        color: $color-02;
-    }
-    li {
-        color: $color-04;
+@mixin theme ($theme: $color-01) {
+    border: 1px solid $theme;
+}
 
-        a {
+.cars {
+
+       &__title {
+        color: $color-02;
+        margin-top: $mt-f;
+    }
+    
+    &__item {
+        @include theme;
+        color: $color-04;
+        display: block;
+
+        @media (max-width: $tablet) {
+            margin-top: $mt;
+        }
+
+        &--destaks {
+            @include theme;
             background-color: $color-default;
         }
+    }
+
+    &__text-description {
+        color: $color-05;
+    }
+
+    &__button {
+            background-color: $color-03;
     }
 }
